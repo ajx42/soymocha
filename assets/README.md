@@ -1,0 +1,1 @@
+This directory contains configurations and related files for every protocol we support. We will generally just copy these directories straightaway to remote hosts to run nodes.
