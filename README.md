@@ -10,5 +10,6 @@
 # Example ethereum setup
 
 ```shell
+source env.sh
 python scripts/setuptool.py --app ethereum --manifest manifest.xml --pvt-key ~/.ssh/id_ed25519 --session saladbowl
 ```
