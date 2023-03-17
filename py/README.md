@@ -2,7 +2,14 @@
 ### Bunch of tools to help with setup
 
 ## Cloudlab
+
+If this is the first time you are using the cloudlab experiment, you may want some configuration (tmux, vim, zsh) moved to the nodes:
+
+```bash
+python sminstaller.py --manifest manifest.xml --pvt-key ~/.ssh/id_ed25519 --session mocha
+```
 Generate a TMUX script under `$PROJ_HOME/build`: `tmux.<session_name>.sh`.
+
 ```bash
 # Local
 python smtmuxgen.py --manifest manifest.xml --session mocha
