@@ -5,7 +5,7 @@
 Generate a TMUX script under `$PROJ_HOME/build`: `tmux.<session_name>.sh`.
 ```bash
 # Local
-python sminstaller.py --manifest manifest.xml --pvt-key ~/.ssh/id_ed25519 --session mocha
+python smtmuxgen.py --manifest manifest.xml --session mocha
 ``` 
 
 Run this script to build out a tmux session. Then attach the session to get started. This should have zsh installed on all nodes, so type in `zsh` if the logon doesn't directly launch the zsh prompt.
