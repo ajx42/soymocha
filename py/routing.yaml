@@ -1,0 +1,28 @@
+Nodes:
+  node1:
+    name: Alice # specifies the name of the node, this is used for logging purposes.
+    address: rm4C4ReiJEe6D1kZkVuzCcEuiUL5oGaBxZ
+    identity_pubkey: 02490ad2248ef5ffee36ba605c41e2dbe89ae24d27b72418d6681a8fe48eb14ca0
+    ip: 10.10.1.2
+  node2:
+    name: Bob
+    address: rWDGjaPKp8EyBKjUHk4KtaV5kpkVfxLg5P
+    identity_pubkey: 02efed49ac16e6c6c6a43317ed56f8581f523f6e9b1d89e769e4018760c5bb289b
+    ip: 10.10.1.3
+  node3:
+    name: Charlie
+    address: rm8pfKFACoxZFpjLdyU3qbi1m3kRgrWhuM
+    identity_pubkey: 038d35671c913fc2fc20539c759d1189eedf88eabdd9b038aeb0bee9d1f7c00f2a
+    ip: 10.10.1.4
+  mining_node:
+    name: node0
+    blocks_to_generate: 6 # specifies the number of blocks to generate after the channel is opened.
+Channels:
+  channel1:
+    firstNode: node1
+    secondNode: node2
+    localAmt: 1000000 # specifies the amount of money that the calling node will commit to the channel.
+  channel2:
+    firstNode: node2
+    secondNode: node3
+    localAmt: 1000000 # specifies the amount of money that the calling node will commit to the channel.
