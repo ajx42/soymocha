@@ -4,10 +4,14 @@ This directory contains tools and libs to work with LN RPC.
 It turns out LN RPC is the ideal way to do the kind of manipulation we are wanting to do in terms of setting up graphs and channels. Shells scripts are messy and require going back and forth between cloudlab and local. This work runs completely on our local end!
 
 ### Start
-We assume that Lightning Network is already running on cloudlab. How? Using our other scripts in soymocha/py. But the wallets aren't unlocked/created. Neither are they funded.
+We assume that Lightning Network is already running on cloudlab. How? Using our other scripts in soymocha/py. But the wallets aren't unlocked/created. Neither are they funded. We also assume that project environment has been enabled, if you haven't done so, `source env.sh` in the project root dir.
 
-### Step - 0: Pull Config from Remote
+### Step - 0: Preparation
 ```shell
+# this will generate python RPC bindings for LNRPC services
+./preproc.sh 
+
+# fetch node configuration
 python fetchauth.py --manifest ../manifest.xml --op fetch
 ```
 
