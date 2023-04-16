@@ -47,6 +47,15 @@ def copy_btc_node(details, pkey, source, targets):
 
         sp.check_call(scp_cmd, shell=True)
 
+        scp_cmd = 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r {}@{}:{} {}@{}:{}'.format(
+            source_node.username, source_node.hostname,
+            ".btcd/rpc.key",
+            node.username, node.hostname,
+            ".btcd/rpc.key"
+        )
+
+        sp.check_call(scp_cmd, shell=True)
+
 def update_configurations(details, pkey, session, source, targets):
     source, targets = preproc_source_targets(source, targets, details)
 

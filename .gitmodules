@@ -1,0 +1,9 @@
+[submodule "third_party/googleapis"]
+	path = third_party/googleapis
+	url = https://github.com/googleapis/googleapis.git
+[submodule "python-bitcoinrpc"]
+	path = python-bitcoinrpc
+	url = https://github.com/jgarzik/python-bitcoinrpc.git
+[submodule "third_party/btcd"]
+	path = third_party/btcd
+	url = https://github.com/btcsuite/btcd
