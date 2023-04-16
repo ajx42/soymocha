@@ -86,8 +86,8 @@ def getInfoAllNodes(details, excludes=None):
         if node.name not in excludes:
             print(getInfo(node.name).identity_pubkey)
 
-def genFundAllNodes(details, excludes):
-    with open('fundallnodes.sh', 'w+') as rf:
+def genFundAllNodes(details, excludes, filename):
+    with open(filename, 'w+') as rf:
         for node in details:
             if node.name not in excludes:
                 conn = LNConnector(node.name)

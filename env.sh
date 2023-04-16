@@ -14,4 +14,4 @@ export GOPATH=$PROJ_HOME/build/
 export GOROOT=/usr/local/go
 cd $PROJ_HOME/third_party/btcd
 go install . ./cmd/... || true
-
+cd $PROJ_HOME
