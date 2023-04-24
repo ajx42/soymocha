@@ -48,6 +48,9 @@ edge=3,5,20000
 ### Step 5: Build the graph
 ```shell
 python fetchauth.py --manifest ../manifest.xml --op buildgraph --exclude node0 --file graph.conf
+
+# generate a few blocks to commit the channels
+python fetchauth.py --manifest ../manifest.xml --op commit --exclude node0
 ```
 
 ### Printing Channels
@@ -60,3 +63,7 @@ python fetchauth.py --manifest ../manifest.xml --op printchannels --exclude node
 python fetchauth.py --manifest ../manifest.xml --op disconnectgraph --exclude node0 --file graph.conf
 ```
 
+### Pending Channels
+If your channels are not getting confirmed, the following can be the issue:
+- Insufficient balance in the vertices.
+- The chain length is less than 300. LND uses segwit data which is not enabled until minimum length of 300.
